@@ -154,7 +154,7 @@ $geckoboardClient->push($widget);
 
 Widget: Funnel
 ==============
-[![Funnel](http://cdn2.hubspot.net/hub/326854/file-373981786-png/images/Funnel-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/funnel/)
+[![Funnel](https://developer-custom.geckoboard.com/images/funnel-5bbf21de.png)](https://developer-custom.geckoboard.com/#funnel/)
 
 ```php
 use CarlosIO\Geckoboard\Data\Funnel\Entry;
@@ -202,7 +202,7 @@ $geckoboardClient->push($widget);
 
 Widget: PieChart
 ==============
-[![PieChart](https://d2s28ygc2k7998.cloudfront.net/widget_thumbs_new/piechart.png)](https://developer.geckoboard.com/#pie-chart)
+[![PieChart](https://developer-custom.geckoboard.com/images/pie-c39c7884.png)](https://developer.geckoboard.com/#pie-chart)
 
 ```php
 use CarlosIO\Geckoboard\Data\PieChart\Entry;
@@ -232,7 +232,7 @@ $geckoboardClient->push($widget);
 
 Widget: Geck-o-Meter
 ==================
-[![Geck-o-Meter](http://cdn2.hubspot.net/hub/326854/file-373966356-png/images/Geck-O-Meter-1.png?t=1383906792000)](http://www.geckoboard.com/developers/custom-widgets/widget-types/geck-o-meter)
+[![Geck-o-Meter](https://developer-custom.geckoboard.com/images/geckometer-39fcd0de.png)](https://developer-custom.geckoboard.com/#geck-o-meter)
 
 ```php
 use CarlosIO\Geckoboard\Data\Entry;
@@ -250,7 +250,7 @@ $geckoboardClient->push($widget);
 
 Widget: Map
 ===========
-[![Map](http://cdn2.hubspot.net/hub/326854/file-371190739-png/images/Map-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/map)
+[![Map](https://developer-custom.geckoboard.com/images/map-7861b656.png)](https://developer-custom.geckoboard.com/#map)
 
 ```php
 use CarlosIO\Geckoboard\Data\Point;
@@ -267,7 +267,7 @@ $geckoboardClient->push($widget);
 ```
 Widget: LineChart2 Polling (version 2)
 =================
-[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
+[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](https://developer-custom.geckoboard.com/#line-chart)
 
 ```php
 require '../gecko/vendor/autoload.php'; //locate accordingly
@@ -335,7 +335,7 @@ echo json_encode($widget_return);
 
 Widget: LineChart2 Push (version 2)
 =================
-[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
+[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](https://developer-custom.geckoboard.com/#line-chart)
 
 ```php
 require '../gecko/vendor/autoload.php'; //locate accordingly
@@ -422,7 +422,7 @@ $geckoboardClient->push($widget);
 
 Widget: List
 ============
-[![List](http://cdn2.hubspot.net/hub/326854/file-374648282-png/images/list_2x2.png?t=1383907610000)](http://www.geckoboard.com/developers/custom-widgets/widget-types/list)
+[![List](https://developer-custom.geckoboard.com/images/list-7040bbcd.png)](https://developer-custom.geckoboard.com/#list)
 
 ```php
 use CarlosIO\Geckoboard\Data\ItemList\Label;
@@ -456,7 +456,7 @@ $geckoboardClient->push($widget);
 
 Widget: Monitoring
 ==================
-![Monitoring](https://developer.geckoboard.com/images/monitoring-5641d6ed.png)
+[![Monitoring](https://developer.geckoboard.com/images/monitoring-5641d6ed.png)](https://developer-custom.geckoboard.com/images/monitoring-5641d6ed.png)
 
 ```php
 $widget = (new Monitoring())
@@ -470,7 +470,7 @@ $geckoboardClient()->push($widget);
 
 Widget: LeaderBoard
 ==================
-![Monitoring](https://developer.geckoboard.com/images/leaderboard-834d9e04.png)
+[![Monitoring](https://developer-custom.geckoboard.com/images/leaderboard-834d9e04.png)](https://developer-custom.geckoboard.com/#leaderboard)
 
 ```php
 $widget = new LeaderBoard();
