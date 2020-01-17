@@ -405,7 +405,7 @@ $geckoboardClient->push($widget);
 
 Widget: LineChart (version 1 legacy)
 =================
-[![Line Chart](http://cdn2.hubspot.net/hub/326854/file-373977296-png/images/Line-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
+[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](https://gist.github.com/leocassarani/be2e76e41fd0c3330c78)
 
 ```php
 use CarlosIO\Geckoboard\Widgets\LineChart;
