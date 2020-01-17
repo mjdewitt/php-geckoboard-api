@@ -260,8 +260,139 @@ $widget->addPoint($point);
 
 $geckoboardClient->push($widget);
 ```
+Widget: LineChart2 Polling (version 2)
+=================
+[![Line Chart](http://cdn2.hubspot.net/hub/326854/file-373977296-png/images/Line-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
 
-Widget: LineChart
+```php
+require '../gecko/vendor/autoload.php';
+
+use CarlosIO\Geckoboard\Data\LineChart2\Entry;
+use CarlosIO\Geckoboard\Widgets\LineChart2;
+
+
+$widget = new LineChart2();
+
+$entry = new Entry();
+$entry->setFormatyAxis('currency');
+$entry->setUnityAxis('USD');
+$entry->setLabelsxAxis("Jan");
+$entry->setLabelsxAxis("Feb");
+$entry->setLabelsxAxis("Mar");
+$entry->setLabelsxAxis("Apr");
+$entry->setLabelsxAxis("May");
+$entry->setLabelsxAxis("Jun");
+$entry->setLabelsxAxis("Jul");
+$entry->setLabelsxAxis("Aug");
+$entry->setLabelsxAxis("Sep");
+$entry->setLabelsxAxis("Oct");
+$entry->setLabelsxAxis("Nov");
+$entry->setLabelsxAxis("Dec");
+$seriesName = 'GBP -> USD';
+$entry->addSeries($seriesName);
+$entry->addSeriesValue($seriesName,1.62529);
+$entry->addSeriesValue($seriesName,1.56991);
+$entry->addSeriesValue($seriesName,1.50420);
+$entry->addSeriesValue($seriesName,1.52265);
+$entry->addSeriesValue($seriesName,1.55356);
+$entry->addSeriesValue($seriesName,1.51930);
+$entry->addSeriesValue($seriesName,1.52148);
+$entry->addSeriesValue($seriesName,1.51173); 
+$entry->addSeriesValue($seriesName,1.52148);
+$entry->addSeriesValue($seriesName,1.55170);
+$entry->addSeriesValue($seriesName,1.61966);
+$entry->addSeriesValue($seriesName,1.59255);
+$entry->addSeriesValue($seriesName,1.63762);
+
+$seriesName = 'USD -> GBP';
+$entry->addSeries($seriesName);
+$entry->addSeriesValue($seriesName,1.42529);
+$entry->addSeriesValue($seriesName,1.46991);
+$entry->addSeriesValue($seriesName,1.40420);
+$entry->addSeriesValue($seriesName,1.42265);
+$entry->addSeriesValue($seriesName,1.45356);
+$entry->addSeriesValue($seriesName,1.41930);
+$entry->addSeriesValue($seriesName,1.42148);
+$entry->addSeriesValue($seriesName,1.41173); 
+$entry->addSeriesValue($seriesName,1.42148);
+$entry->addSeriesValue($seriesName,1.45170);
+$entry->addSeriesValue($seriesName,1.51966);
+$entry->addSeriesValue($seriesName,1.49255);
+$entry->addSeriesValue($seriesName,1.53762);
+$widget->addEntry($entry);
+
+$widget_return =$widget->getData();
+echo json_encode($widget_return);
+```
+
+Widget: LineChart2 Push (version 2)
+=================
+[![Line Chart](http://cdn2.hubspot.net/hub/326854/file-373977296-png/images/Line-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
+
+```php
+require '../gecko/vendor/autoload.php';
+
+use CarlosIO\Geckoboard\Data\LineChart2\Entry;
+use CarlosIO\Geckoboard\Widgets\LineChart2;
+use CarlosIO\Geckoboard\Client;
+
+$widget = new LineChart2();
+$widget->setId('<your widget id>'); //get this from the setup of dashboard tile
+
+$entry = new Entry();
+$entry->setFormatyAxis('currency');
+$entry->setUnityAxis('USD');
+$entry->setLabelsxAxis("Jan");
+$entry->setLabelsxAxis("Feb");
+$entry->setLabelsxAxis("Mar");
+$entry->setLabelsxAxis("Apr");
+$entry->setLabelsxAxis("May");
+$entry->setLabelsxAxis("Jun");
+$entry->setLabelsxAxis("Jul");
+$entry->setLabelsxAxis("Aug");
+$entry->setLabelsxAxis("Sep");
+$entry->setLabelsxAxis("Oct");
+$entry->setLabelsxAxis("Nov");
+$entry->setLabelsxAxis("Dec");
+$seriesName = 'GBP -> USD';
+$entry->addSeries($seriesName);
+$entry->addSeriesValue($seriesName,1.62529);
+$entry->addSeriesValue($seriesName,1.56991);
+$entry->addSeriesValue($seriesName,1.50420);
+$entry->addSeriesValue($seriesName,1.52265);
+$entry->addSeriesValue($seriesName,1.55356);
+$entry->addSeriesValue($seriesName,1.51930);
+$entry->addSeriesValue($seriesName,1.52148);
+$entry->addSeriesValue($seriesName,1.51173); 
+$entry->addSeriesValue($seriesName,1.52148);
+$entry->addSeriesValue($seriesName,1.55170);
+$entry->addSeriesValue($seriesName,1.61966);
+$entry->addSeriesValue($seriesName,1.59255);
+$entry->addSeriesValue($seriesName,1.63762);
+
+$seriesName = 'USD -> GBP';
+$entry->addSeries($seriesName);
+$entry->addSeriesValue($seriesName,1.42529);
+$entry->addSeriesValue($seriesName,1.46991);
+$entry->addSeriesValue($seriesName,1.40420);
+$entry->addSeriesValue($seriesName,1.42265);
+$entry->addSeriesValue($seriesName,1.45356);
+$entry->addSeriesValue($seriesName,1.41930);
+$entry->addSeriesValue($seriesName,1.42148);
+$entry->addSeriesValue($seriesName,1.41173); 
+$entry->addSeriesValue($seriesName,1.42148);
+$entry->addSeriesValue($seriesName,1.45170);
+$entry->addSeriesValue($seriesName,1.51966);
+$entry->addSeriesValue($seriesName,1.49255);
+$entry->addSeriesValue($seriesName,1.53762);
+$widget->addEntry($entry);
+
+$geckoboardClient = new Client();
+$geckoboardClient->setApiKey('<your api key'); //get this from your dashboard account settings
+$geckoboardClient->push($widget);
+```
+
+Widget: LineChart (version 1 legacy)
 =================
 [![Line Chart](http://cdn2.hubspot.net/hub/326854/file-373977296-png/images/Line-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
 
