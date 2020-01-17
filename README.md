@@ -267,7 +267,7 @@ $geckoboardClient->push($widget);
 ```
 Widget: LineChart2 Polling (version 2)
 =================
-[![Line Chart](http://cdn2.hubspot.net/hub/326854/file-373977296-png/images/Line-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
+[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
 
 ```php
 require '../gecko/vendor/autoload.php'; //locate accordingly
@@ -335,7 +335,7 @@ echo json_encode($widget_return);
 
 Widget: LineChart2 Push (version 2)
 =================
-[![Line Chart](http://cdn2.hubspot.net/hub/326854/file-373977296-png/images/Line-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
+[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
 
 ```php
 require '../gecko/vendor/autoload.php'; //locate accordingly
