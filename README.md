@@ -32,10 +32,10 @@ Usage
 =====
 
 ```php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php'; //locate accordingly
 
 use CarlosIO\Geckoboard\Widgets\NumberAndSecondaryStat;
-use CarlosIO\Geckoboard\Client;
+use CarlosIO\Geckoboard\Client; //Client is only needed for push
 
 $widget = new NumberAndSecondaryStat();
 $widget->setId('<your widget id>');
@@ -45,7 +45,12 @@ $widget->setMainPrefix('EUR');
 
 $geckoboardClient = new Client();
 $geckoboardClient->setApiKey('<your token>');
-$geckoboardClient->push($widget);
+$geckoboardClient->push($widget); 
+/* if polling, remove/comment ^^^ the previous line and add these lines:
+    $widget_return =$widget->getData();
+    echo json_encode($widget_return);
+*/
+
 ```
 
 Widget: Number and optional secondary stat
@@ -265,7 +270,7 @@ Widget: LineChart2 Polling (version 2)
 [![Line Chart](http://cdn2.hubspot.net/hub/326854/file-373977296-png/images/Line-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
 
 ```php
-require '../gecko/vendor/autoload.php';
+require '../gecko/vendor/autoload.php'; //locate accordingly
 
 use CarlosIO\Geckoboard\Data\LineChart2\Entry;
 use CarlosIO\Geckoboard\Widgets\LineChart2;
@@ -288,7 +293,9 @@ $entry->setLabelsxAxis("Sep");
 $entry->setLabelsxAxis("Oct");
 $entry->setLabelsxAxis("Nov");
 $entry->setLabelsxAxis("Dec");
-$seriesName = 'GBP -> USD';
+
+//add 1st series data. data is stored/grouped by the series name
+$seriesName = 'GBP -> USD'; //setting this makes life easier
 $entry->addSeries($seriesName);
 $entry->addSeriesValue($seriesName,1.62529);
 $entry->addSeriesValue($seriesName,1.56991);
@@ -304,6 +311,7 @@ $entry->addSeriesValue($seriesName,1.61966);
 $entry->addSeriesValue($seriesName,1.59255);
 $entry->addSeriesValue($seriesName,1.63762);
 
+//add 2nd series data.
 $seriesName = 'USD -> GBP';
 $entry->addSeries($seriesName);
 $entry->addSeriesValue($seriesName,1.42529);
@@ -330,7 +338,7 @@ Widget: LineChart2 Push (version 2)
 [![Line Chart](http://cdn2.hubspot.net/hub/326854/file-373977296-png/images/Line-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/line-chart)
 
 ```php
-require '../gecko/vendor/autoload.php';
+require '../gecko/vendor/autoload.php'; //locate accordingly
 
 use CarlosIO\Geckoboard\Data\LineChart2\Entry;
 use CarlosIO\Geckoboard\Widgets\LineChart2;
@@ -354,7 +362,9 @@ $entry->setLabelsxAxis("Sep");
 $entry->setLabelsxAxis("Oct");
 $entry->setLabelsxAxis("Nov");
 $entry->setLabelsxAxis("Dec");
-$seriesName = 'GBP -> USD';
+
+//add 1st series data. data is stored/grouped by the series name
+$seriesName = 'GBP -> USD'; //setting this makes life easier
 $entry->addSeries($seriesName);
 $entry->addSeriesValue($seriesName,1.62529);
 $entry->addSeriesValue($seriesName,1.56991);
@@ -370,6 +380,7 @@ $entry->addSeriesValue($seriesName,1.61966);
 $entry->addSeriesValue($seriesName,1.59255);
 $entry->addSeriesValue($seriesName,1.63762);
 
+//add 2nd series data.
 $seriesName = 'USD -> GBP';
 $entry->addSeries($seriesName);
 $entry->addSeriesValue($seriesName,1.42529);
@@ -388,7 +399,7 @@ $entry->addSeriesValue($seriesName,1.53762);
 $widget->addEntry($entry);
 
 $geckoboardClient = new Client();
-$geckoboardClient->setApiKey('<your api key'); //get this from your dashboard account settings
+$geckoboardClient->setApiKey('<your token>'); //get this from your dashboard account settings
 $geckoboardClient->push($widget);
 ```
 
