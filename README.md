@@ -456,7 +456,7 @@ $geckoboardClient->push($widget);
 
 Widget: Monitoring
 ==================
-[![Monitoring](https://developer.geckoboard.com/images/monitoring-5641d6ed.png)](https://developer-custom.geckoboard.com/images/monitoring-5641d6ed.png)
+[![Monitoring](https://developer-custom.geckoboard.com/images/monitoring-5641d6ed.png)](https://developer-custom.geckoboard.com/#monitoring)
 
 ```php
 $widget = (new Monitoring())
