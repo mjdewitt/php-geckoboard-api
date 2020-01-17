@@ -74,7 +74,7 @@ $geckoboardClient->push($widget);
 
 Widget: RAG numbers only
 ========================
-[![RAG numbers only](http://cdn2.hubspot.net/hub/326854/file-376184420-png/images/RAGNumbers-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/rag-numbers-only/)
+[![RAG numbers only](https://developer-custom.geckoboard.com/images/rag-bd722029.png)](https://developer-custom.geckoboard.com/#rag/)
 
 ```php
 use CarlosIO\Geckoboard\Data\Entry;
@@ -101,7 +101,6 @@ $geckoboardClient->push($widget);
 
 Widget: RAG column and numbers
 ==============================
-[![RAG column and numbers](https://developer-custom.geckoboard.com/images/rag-bd722029.png)](https://developer-custom.geckoboard.com/#rag)
 [![RAG column and numbers](https://developer-custom.geckoboard.com/images/rag-column-24560f60.png)](https://developer-custom.geckoboard.com/#rag)
 
 ```php
