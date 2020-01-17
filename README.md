@@ -55,7 +55,7 @@ $geckoboardClient->push($widget);
 
 Widget: Number and optional secondary stat
 ==========================================
-[![Number and optional secondary stat](http://cdn2.hubspot.net/hub/326854/file-376188200-png/images/Number2ndstat-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/number-and-optional-secondary-stat/)
+[![Number and optional secondary stat](https://developer-custom.geckoboard.com/images/number-d01cb958.png)](https://developer-custom.geckoboard.com/#number-and-secondary-stat)
 
 ```php
 use CarlosIO\Geckoboard\Widgets\NumberAndSecondaryStat;
