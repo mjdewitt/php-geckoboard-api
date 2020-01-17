@@ -101,7 +101,8 @@ $geckoboardClient->push($widget);
 
 Widget: RAG column and numbers
 ==============================
-[![RAG column and numbers](http://cdn2.hubspot.net/hub/326854/file-377705499-png/images/RAGColNum-1-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/rag-column-and-numbers/)
+[![RAG column and numbers](https://developer-custom.geckoboard.com/images/rag-bd722029.png)](https://developer-custom.geckoboard.com/#rag)
+[![RAG column and numbers](https://developer-custom.geckoboard.com/images/rag-column-24560f60.png)](https://developer-custom.geckoboard.com/#rag)
 
 ```php
 use CarlosIO\Geckoboard\Data\Entry;
@@ -128,7 +129,7 @@ $geckoboardClient->push($widget);
 
 Widget: Text
 ============
-[![Text](http://cdn2.hubspot.net/hub/326854/file-371241154-png/images/Text-1.png)](http://www.geckoboard.com/developers/custom-widgets/widget-types/text/)
+[![Text](https://developer-custom.geckoboard.com/images/text-cfb71151.png)](https://developer-custom.geckoboard.com/#text)
 
 ```php
 use CarlosIO\Geckoboard\Widgets\Text;
