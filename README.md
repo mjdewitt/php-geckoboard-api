@@ -333,6 +333,53 @@ $widget_return =$widget->getData();
 echo json_encode($widget_return);
 ```
 
+Widget: LineChart2 Polling  Datetime example (version 2)
+=================
+[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](https://developer-custom.geckoboard.com/#line-chart)
+
+It seems that a series of type, datetime is considered a scatter series and so X-Axis labels are not allowed.
+Setting incomplete will change the solid plot-line to a broken plot-line
+
+```php
+require '../gecko/vendor/autoload.php'; //locate accordingly
+
+use CarlosIO\Geckoboard\Data\LineChart2\Entry;
+use CarlosIO\Geckoboard\Widgets\LineChart2;
+
+
+$widget = new LineChart2();
+//$widget->setId('<your widget id>');
+//$widget->setId('769871-62cd28d0-1af1-0138-447b-0e571bc713b0');
+
+$entry = new Entry();
+$entry->setFormatyAxis('currency');
+$entry->setUnityAxis('USD');
+$seriesName = 'GBP -> USD';
+$entry->setSeriesType('datetime'); //Geckoboard will expect some form of date/datetime data on the X axis.
+$entry->setSeriesIncomplete('2019-12'); //value given has to match an X value in the series data.
+$entry->addSeries($seriesName);
+//$entry->addSeriesValue($seriesName,$valueX,$valueY); // $valueX is optional, valuex maybe a datetime if series type is defined as datetime and xlabels are not set
+
+$entry->addSeriesValue($seriesName,'2019-01',1.56991);
+$entry->addSeriesValue($seriesName,'2019-02',1.50420);
+$entry->addSeriesValue($seriesName,'2019-03',1.52265);
+$entry->addSeriesValue($seriesName,'2019-04',1.55356);
+$entry->addSeriesValue($seriesName,'2019-05',1.51930);
+$entry->addSeriesValue($seriesName,'2019-06',1.52148);
+$entry->addSeriesValue($seriesName,'2019-07',1.51173); 
+$entry->addSeriesValue($seriesName,'2019-08',1.52148);
+$entry->addSeriesValue($seriesName,'2019-09',1.55170);
+$entry->addSeriesValue($seriesName,'2019-10',1.61966);
+$entry->addSeriesValue($seriesName,'2019-11',1.59255);
+$entry->addSeriesValue($seriesName,'2019-12',1.63762);
+
+$widget->addEntry($entry);
+
+$widget_return =$widget->getData();
+
+echo json_encode($widget_return);
+```
+
 Widget: LineChart2 Push (version 2)
 =================
 [![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](https://developer-custom.geckoboard.com/#line-chart)
