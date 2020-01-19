@@ -335,7 +335,7 @@ echo json_encode($widget_return);
 
 Widget: LineChart2 Polling  Datetime example (version 2)
 =================
-[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-976e0b94.png)](https://developer-custom.geckoboard.com/#line-chart)
+[![Line Chart](https://developer-custom.geckoboard.com/images/linechart-datetime-b82b91ae.png)](https://developer-custom.geckoboard.com/#line-chart)
 
 It seems that a series of type, datetime is considered a scatter series and so X-Axis labels are not allowed.
 Setting incomplete will change the solid plot-line to a broken plot-line
