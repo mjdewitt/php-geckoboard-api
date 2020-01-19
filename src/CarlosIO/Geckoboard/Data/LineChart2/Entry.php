@@ -128,7 +128,7 @@ class Entry
  //   		    	throw new \Exception('Series data has too many entries');
  //   	}
     	
-    		if ($seriesValue1 != null) {
+    		if ($seriesValue1 !== null) {
     			if (! is_numeric($seriesValue1) && 
     					(! strtotime($seriesValue1) && 
     					isset( $this->seriesData[$seriesName]['type'] ) && 
@@ -143,12 +143,12 @@ class Entry
     				throw new \Exception('Series X labels already defined');
     			}    			    			
 				}
-    		if ($seriesValue2 != null) {				
+    		if ($seriesValue2 !== null) {				
       		if (! is_numeric($seriesValue2)  ) {
     				throw new \Exception('Series Y value is not numeric');
     			}  	
     	}
-if ($seriesValue2 != null ) {
+if ($seriesValue2 !== null ) {
         $this->seriesData[$seriesName][] = array($seriesValue1,$seriesValue2);
 } else {
 	        $this->seriesData[$seriesName][] = $seriesValue1;
