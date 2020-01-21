@@ -159,6 +159,7 @@ Widget: Funnel
 ```php
 use CarlosIO\Geckoboard\Data\Funnel\Entry;
 use CarlosIO\Geckoboard\Widgets\Funnel;
+use CarlosIO\Geckoboard\Client;
 
 $widget = new Funnel();
 $widget->setId('<your widget id>');
@@ -207,6 +208,7 @@ Widget: PieChart
 ```php
 use CarlosIO\Geckoboard\Data\PieChart\Entry;
 use CarlosIO\Geckoboard\Widgets\PieChart;
+use CarlosIO\Geckoboard\Client;
 
 $widget = new PieChart();
 $widget->setId('<your widget id>');
@@ -237,13 +239,20 @@ Widget: Geck-o-Meter
 ```php
 use CarlosIO\Geckoboard\Data\Entry;
 use CarlosIO\Geckoboard\Widgets\GeckoMeter;
+use CarlosIO\Geckoboard\Client;
 
 $widget = new GeckoMeter();
 $widget->setId('<your widget id>');
 
-$widget->setMinData((new Entry())->setValue(0));
-$widget->setMaxData((new Entry())->setValue(100));
-$widget->setValue($data);
+$minentry = new Entry();
+$minentry->setValue(0);
+$widget->setMinData($minentry);
+
+$maxentry = new Entry();
+$maxentry->setValue(100);
+$widget->setMaxData($maxentry);
+
+$widget->setValue(23); //set your datapoint value
 
 $geckoboardClient->push($widget);
 ```
@@ -255,6 +264,7 @@ Widget: Map
 ```php
 use CarlosIO\Geckoboard\Data\Point;
 use CarlosIO\Geckoboard\Widgets\Map;
+use CarlosIO\Geckoboard\Client;
 
 $widget = new Map();
 $widget->setId('<your widget id>');
