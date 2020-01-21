@@ -74,7 +74,7 @@ $geckoboardClient->push($widget);
 
 Widget: RAG numbers only
 ========================
-[![RAG numbers only](https://developer-custom.geckoboard.com/images/rag-bd722029.png)](https://developer-custom.geckoboard.com/#rag/)
+[![RAG numbers only](https://developer-custom.geckoboard.com/images/rag-bd722029.png)](https://developer-custom.geckoboard.com/#rag)
 
 ```php
 use CarlosIO\Geckoboard\Data\Entry;
