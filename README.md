@@ -516,18 +516,22 @@ Widget: Monitoring
 [![Monitoring](https://developer-custom.geckoboard.com/images/monitoring-5641d6ed.png)](https://developer-custom.geckoboard.com/#monitoring)
 
 ```php
-$widget = (new Monitoring())
-    ->setId('<your widget id>')
-    ->setStatus('Up')
-    ->setDownTime('3 days ago')
-    ->setResponseTime('100 ms');
+require '../gecko/vendor/autoload.php';
+use CarlosIO\Geckoboard\Widgets\Monitoring;
+
+$widget = new Monitoring();
+
+$widget->setId('<your widget id>');
+$widget->setStatus('Up');
+$widget->setDownTime('3 days ago');
+$widget->setResponseTime('100 ms');
 
 $geckoboardClient()->push($widget);
 ```
 
 Widget: LeaderBoard
 ==================
-[![Monitoring](https://developer-custom.geckoboard.com/images/leaderboard-834d9e04.png)](https://developer-custom.geckoboard.com/#leaderboard)
+[![LeaderBoard](https://developer-custom.geckoboard.com/images/leaderboard-834d9e04.png)](https://developer-custom.geckoboard.com/#leaderboard)
 
 ```php
 $widget = new LeaderBoard();
