@@ -466,6 +466,7 @@ Widget: LineChart (version 1 legacy)
 
 ```php
 use CarlosIO\Geckoboard\Widgets\LineChart;
+use CarlosIO\Geckoboard\Client;
 
 $widget = new LineChart();
 $widget->setId('<your widget id>');
@@ -485,6 +486,7 @@ Widget: List
 use CarlosIO\Geckoboard\Data\ItemList\Label;
 use CarlosIO\Geckoboard\Data\ItemList\Title;
 use CarlosIO\Geckoboard\Widgets\ItemList;
+use CarlosIO\Geckoboard\Client;
 
 $widget = new ItemList();
 $widget->setId('<your widget id>');
@@ -518,6 +520,7 @@ Widget: Monitoring
 ```php
 require '../gecko/vendor/autoload.php';
 use CarlosIO\Geckoboard\Widgets\Monitoring;
+use CarlosIO\Geckoboard\Client;
 
 $widget = new Monitoring();
 
@@ -534,6 +537,11 @@ Widget: LeaderBoard
 [![LeaderBoard](https://developer-custom.geckoboard.com/images/leaderboard-834d9e04.png)](https://developer-custom.geckoboard.com/#leaderboard)
 
 ```php
+require '../gecko/vendor/autoload.php';
+use CarlosIO\Geckoboard\Data\LeaderBoard\Item;
+use CarlosIO\Geckoboard\Widgets\LeaderBoard;
+use CarlosIO\Geckoboard\Client;
+
 $widget = new LeaderBoard();
 $widget->setId('<your widget id>')
 
